@@ -56,20 +56,35 @@ class main:
                 print(f"|{argv}")
 
     def output(self):
-        print(f"\033[33m{len(self.hiden_file_list)}----hiden-file----")
-        self.display(self.hiden_file_list)
+        if int(len(self.hiden_file_list)) == 0:
+            pass
+        else:
+            print(f"\033[33m{len(self.hiden_file_list)}----hiden-file----")
+            self.display(self.hiden_file_list)
 
-        print(f"\033[35m{len(self.hiden_folder_list)}----hiden-directory----")
-        self.display(self.hiden_folder_list)
+        if int(len(self.hiden_folder_list)) == 0:
+            pass
+        else:
+            print(f"\033[35m{len(self.hiden_folder_list)}----hiden-directory----")
+            self.display(self.hiden_folder_list)
         
-        print(f"\033[37m{len(self.files_list)}----files-----")
-        self.display(self.files_list)
+        if int(len(self.files_list)) == 0:
+            pass
+        else:
+            print(f"\033[37m{len(self.files_list)}----files-----")
+            self.display(self.files_list)
 
-        print(f"\033[32m{len(self.runnable_files)}----runnable----")
-        self.display(self.runnable_files)
+        if int(len(self.runnable_files)) == 0:
+            pass
+        else:
+            print(f"\033[32m{len(self.runnable_files)}----runnable----")
+            self.display(self.runnable_files)
 
-        print(f"\033[36m{len(self.folder_list)}----directory----")
-        self.display(self.folder_list)
+        if int(len(self.folder_list)) == 0:
+            pass
+        else:
+            print(f"\033[36m{len(self.folder_list)}----directory----")
+            self.display(self.folder_list)
 
         print("\033[37m")
 
